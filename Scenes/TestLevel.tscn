@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1axdwncm5xil"]
+[gd_scene load_steps=7 format=3 uid="uid://d1axdwncm5xil"]
 
 [ext_resource type="PackedScene" uid="uid://ujchv17lhi5k" path="res://Scenes/player_tree.tscn" id="2_lnngg"]
+[ext_resource type="PackedScene" uid="uid://boefcrvsovj3k" path="res://Scenes/lumber_jacks.tscn" id="2_utwcx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uorg0"]
 albedo_color = Color(0.181167, 0.39922, 0.224262, 1)
@@ -29,9 +30,12 @@ data = {
 "cells": PackedInt32Array(1, 6, 0)
 }
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_lnngg")]
+[node name="Player" parent="." instance=ExtResource("2_lnngg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.42229, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0868427, 0.996222, 0, -0.996222, -0.0868427, 0, 28.4167, 0)
 shadow_enabled = true
+
+[node name="LumberJacks" parent="." instance=ExtResource("2_utwcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.20123, -17)

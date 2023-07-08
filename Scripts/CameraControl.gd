@@ -4,8 +4,8 @@ extends Node3D
 var camrot_h = 0
 var camrot_v = 0
 
-var sens_h = 0.05
-var sens_v = 0.05
+var sens_h = 0.08
+var sens_v = 0.08
 func _ready():
 	pass
 
@@ -16,6 +16,6 @@ func _physics_process(delta):
 func _input(event):
 	camrot_v = clamp(camrot_v,-55, 30)
 	
-	if  event is InputEventMouseMotion:
+	if  event is InputEventMouseMotion && Input.is_action_pressed("left_click"):
 		camrot_h += -event.relative.x*sens_h
 		camrot_v += event.relative.y*sens_v
