@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://h5lv0patloqc"]
+
+[ext_resource type="PackedScene" uid="uid://c0otvodp0vbe8" path="res://Assets/mesh_tree_3d.glb" id="1_3if24"]
+
+[node name="mesh_tree_3d" instance=ExtResource("1_3if24")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, 0, 0)
+bones/1/rotation = Quaternion(-0.00154214, 1.19209e-07, -1.83837e-10, 0.999999)
+bones/2/rotation = Quaternion(0.00889012, 1.77799e-14, 2.11957e-09, 0.99996)
+bones/3/rotation = Quaternion(-0.814023, -6.92407e-08, -9.7039e-08, 0.580833)
+bones/5/rotation = Quaternion(0.719016, -1.13438e-08, 1.02836e-07, 0.694993)
+bones/6/rotation = Quaternion(-0.273871, 2.92508e-07, -1.09808e-07, 0.961767)

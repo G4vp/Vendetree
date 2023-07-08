@@ -1,22 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://ujchv17lhi5k"]
 
-[ext_resource type="Script" path="res://Scenes/player_tree.gd" id="1_r47oh"]
-[ext_resource type="PackedScene" uid="uid://d3f6u48dx5xiu" path="res://Assets/mcvilla_pintado.glb" id="2_43161"]
+[ext_resource type="Script" path="res://Scripts/player_tree.gd" id="1_wocdy"]
+[ext_resource type="PackedScene" uid="uid://h5lv0patloqc" path="res://Scenes/mesh_tree_3d.tscn" id="2_dnaxe"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_cgl8n"]
-size = Vector3(1.105, 6.42, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_intgj"]
+radius = 0.7
+height = 6.8
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_r47oh")
+collision_layer = 2
+script = ExtResource("1_wocdy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31466, 0)
-shape = SubResource("BoxShape3D_cgl8n")
+shape = SubResource("CapsuleShape3D_intgj")
 
 [node name="Collisions" type="Node3D" parent="."]
 
-[node name="mcvilla_pintado" parent="." instance=ExtResource("2_43161")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36029, 4.46661, 6.3732)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.919348, 0.393445, 0, -0.393445, 0.919348, -0.0539465, 8.25433, 8.20097)
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0719299, 0.409133, -0.997045)
+
+[node name="mesh_tree_3d" parent="." instance=ExtResource("2_dnaxe")]
