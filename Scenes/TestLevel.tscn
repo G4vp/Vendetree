@@ -34,3 +34,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.42229, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0868427, 0.996222, 0, -0.996222, -0.0868427, 0, 28.4167, 0)
+shadow_enabled = true

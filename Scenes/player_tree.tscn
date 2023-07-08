@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ujchv17lhi5k"]
+[gd_scene load_steps=5 format=3 uid="uid://ujchv17lhi5k"]
 
 [ext_resource type="Script" path="res://Scripts/player_tree.gd" id="1_wocdy"]
 [ext_resource type="PackedScene" uid="uid://h5lv0patloqc" path="res://Scenes/mesh_tree_3d.tscn" id="2_dnaxe"]
+[ext_resource type="Script" path="res://Scripts/CameraControl.gd" id="2_xjqky"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_intgj"]
 radius = 0.7
@@ -17,10 +18,17 @@ shape = SubResource("CapsuleShape3D_intgj")
 
 [node name="Collisions" type="Node3D" parent="."]
 
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36029, 4.46661, 6.3732)
+[node name="CameraControl" type="Node3D" parent="."]
+script = ExtResource("2_xjqky")
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0719299, 0.409133, -0.997045)
+[node name="h" type="Node3D" parent="CameraControl"]
+
+[node name="v" type="Node3D" parent="CameraControl/h"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraControl/h/v"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8437, 8.22718)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraControl/h/v/Camera3D"]
+spring_length = 8.0
 
 [node name="mesh_tree_3d" parent="." instance=ExtResource("2_dnaxe")]

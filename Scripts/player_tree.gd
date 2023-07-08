@@ -20,8 +20,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	player_movement(delta)
 
-func _input(event):
-	player_camera(event)
 
 func player_movement(delta):
 	if not is_on_floor():
@@ -34,11 +32,7 @@ func player_movement(delta):
 		velocity.y = JUMP_VELOCITY
 		input_dir.x = transform.basis.x.x * transform.basis.x.y
 		input_dir.z = -1
-	# print(transform.basis)
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	print(transform)
-	#var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * input_dir).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
