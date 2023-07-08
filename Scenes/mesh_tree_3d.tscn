@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://h5lv0patloqc"]
+[gd_scene load_steps=5 format=3 uid="uid://h5lv0patloqc"]
 
-[ext_resource type="PackedScene" uid="uid://c0otvodp0vbe8" path="res://Assets/mesh_tree_3d.glb" id="1_3if24"]
+[ext_resource type="PackedScene" uid="uid://c0otvodp0vbe8" path="res://Assets/GLB/mesh_tree_3d.glb" id="1_3if24"]
+[ext_resource type="Animation" uid="uid://dfqhg50x248eg" path="res://Assets/AnimatonRes/action_jump.res" id="2_vktjo"]
+[ext_resource type="Animation" uid="uid://c56kw5ww6x5dc" path="res://Assets/AnimatonRes/action_attack.res" id="3_8mnt5"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_462w5"]
+_data = {
+"action_attack": ExtResource("3_8mnt5"),
+"action_jump": ExtResource("2_vktjo")
+}
 
 [node name="mesh_tree_3d" instance=ExtResource("1_3if24")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -9,6 +17,13 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 bones/0/position = Vector3(0, 0, 0)
 bones/1/rotation = Quaternion(-0.00154214, 1.19209e-07, -1.83837e-10, 0.999999)
 bones/2/rotation = Quaternion(0.00889012, 1.77799e-14, 2.11957e-09, 0.99996)
+bones/3/position = Vector3(2.16249e-07, 1.01002, -0.272379)
 bones/3/rotation = Quaternion(-0.814023, -6.92407e-08, -9.7039e-08, 0.580833)
+bones/4/rotation = Quaternion(0.576588, -9.73394e-10, 2.68002e-10, 0.817035)
 bones/5/rotation = Quaternion(0.719016, -1.13438e-08, 1.02836e-07, 0.694993)
 bones/6/rotation = Quaternion(-0.273871, 2.92508e-07, -1.09808e-07, 0.961767)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"playerAnimation": SubResource("AnimationLibrary_462w5")
+}

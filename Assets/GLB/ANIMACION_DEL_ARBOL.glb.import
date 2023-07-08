@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c0otvodp0vbe8"
-path="res://.godot/imported/mesh_tree_3d.glb-0634db1aaa21bf16c3321dd7d667b5c6.scn"
+uid="uid://bmaac54pud4li"
+path="res://.godot/imported/ANIMACION_DEL_ARBOL.glb-7cbb38bee7335cc2c6769748b5c3e7c7.scn"
 
 [deps]
 
-source_file="res://Assets/mesh_tree_3d.glb"
-dest_files=["res://.godot/imported/mesh_tree_3d.glb-0634db1aaa21bf16c3321dd7d667b5c6.scn"]
+source_file="res://Assets/GLB/ANIMACION_DEL_ARBOL.glb"
+dest_files=["res://.godot/imported/ANIMACION_DEL_ARBOL.glb-7cbb38bee7335cc2c6769748b5c3e7c7.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ _subresources={
 "ArmatureAction_001": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://Assets/Ani.res",
+"save_to_file/path": "res://Assets/AnimatonRes/action_attack.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -1828,6 +1828,18 @@ _subresources={
 "slice_99/save_to_file/path": "",
 "slice_99/start_frame": 0,
 "slices/amount": null
+}
+},
+"meshes": {
+"ANIMACION_DEL_ARBOL_Cube_012": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": true,
+"save_to_file/path": ""
 }
 }
 }

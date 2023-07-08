@@ -21,7 +21,9 @@ func _physics_process(delta):
 
 func _input(event):
 	player_camera(event)
-
+	if Input.is_action_just_pressed("key_attack"):
+		action_attack()
+	
 func player_movement(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -29,7 +31,7 @@ func player_movement(delta):
 	# Handle Jump.
 	var input_dir = Vector3.ZERO
 	if Input.is_action_just_pressed("key_jump") and is_on_floor() and !animation_player.is_playing():
-		animation_player.play("ArmatureAction_001")
+		animation_player.play("playerAnimation/action_jump")
 		velocity.y = JUMP_VELOCITY
 		input_dir.x = transform.basis.x.x * transform.basis.x.z
 		input_dir.z = -1
@@ -45,6 +47,8 @@ func player_movement(delta):
 	
 	move_and_slide()
 	
+func action_attack():
+	animation_player.play("playerAnimation/action_attack")
 func player_camera(input):
-	if input is InputEventMouseMotion && !Input.is_action_pressed("left_click"):
+	if input is InputEventMouseMotion && Input.is_action_pressed("left_click"):
 		rotate_y(deg_to_rad(-input.relative.x * sens_x))
