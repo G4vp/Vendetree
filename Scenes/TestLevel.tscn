@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d1axdwncm5xil"]
+[gd_scene load_steps=18 format=3 uid="uid://d1axdwncm5xil"]
 
 [ext_resource type="Script" path="res://Scripts/TestLevel.gd" id="1_jcctx"]
 [ext_resource type="PackedScene" uid="uid://ujchv17lhi5k" path="res://Scenes/player_tree.tscn" id="2_lnngg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://laa0ljh5moig" path="res://Scenes/Environment/plant_1.tscn" id="3_wwcoj"]
 [ext_resource type="PackedScene" uid="uid://dh0x4klbcn4t0" path="res://Scenes/Environment/tree1.tscn" id="4_ewsq2"]
 [ext_resource type="PackedScene" uid="uid://2g1t4at3oaci" path="res://Scenes/Environment/tree2.tscn" id="5_qhpiy"]
+[ext_resource type="AudioStream" uid="uid://d1jyrmmrfk3a3" path="res://Assets/Audio/arbol.wav" id="7_8d8rh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jsjw3"]
 size = Vector3(70, 70, 1)
@@ -78,7 +79,7 @@ item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 
 item/1/navigation_layers = 1
 metadata/_editor_source_scene = "res://Scenes/Environment/plant_1.tscn"
 
-[node name="Node3D" type="Node3D"]
+[node name="TestLevel" type="Node3D"]
 script = ExtResource("1_jcctx")
 
 [node name="Walls" type="Node3D" parent="."]
@@ -242,3 +243,6 @@ transform = Transform3D(0.161578, -0.010647, 0.986802, -0.0078971, 0.999896, 0.0
 transform = Transform3D(0.401308, -0.00789709, 0.915909, -3.58959e-10, 0.999963, 0.00862182, -0.915943, -0.00346001, 0.401294, -8.92366, 2.46439, 9.13718)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_8d8rh")
+volume_db = -33.768
+autoplay = true

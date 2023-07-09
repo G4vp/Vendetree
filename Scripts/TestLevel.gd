@@ -4,15 +4,21 @@ extends Node3D
 @onready var remain_label = $Labels/RemainLabel
 @onready var lumber_jacks_group = $LumberJacksGroup
 @onready var player = $Player/mesh_tree_3d
+@onready var audio = $AudioStreamPlayer
+@onready var lumber_jacks_count = lumber_jacks_group.get_children().size()
 
 var time_elapsed := 12000
 var minutes
 var seconds
 var time_string
-var lumber_jacks_count
 
+var watch_stopped = false
+
+func _ready():
+	audio.play()
 func _process(delta: float) -> void:
-	stop_watch(delta)
+	if !watch_stopped:
+		stop_watch(delta)
 	if player.mama_I_just_killed_a_man:
 		player.mama_I_just_killed_a_man = false
 		
@@ -22,12 +28,10 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("key_quit"):
 		get_tree().quit()
-	
-	if lumber_jacks_count == 0:
+	if lumber_jacks_count <= 0:
 		Win()
-	elif time_elapsed == 0:
+	elif time_elapsed <= 0:
 		GameOver()
-		
 func stop_watch(delta):
 	time_elapsed -= delta
 	minutes = time_elapsed / 60
@@ -36,7 +40,10 @@ func stop_watch(delta):
 	time_label.text = time_string
 
 func Win():
+	watch_stopped = true
+	await get_tree().create_timer(2).timeout	
 	get_tree().change_scene_to_file("res://Scenes/Win.tscn")
 	
 func GameOver():
 	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+

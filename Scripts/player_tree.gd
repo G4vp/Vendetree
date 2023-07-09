@@ -2,7 +2,8 @@ extends CharacterBody3D
 
 @onready var node_mesh = $mesh_tree_3d
 @onready var animation_player = $mesh_tree_3d/AnimationPlayer
-
+@onready var axe_whip = $AxeWhip
+@onready var pisadas = $Pisadas
 const SPEED = 200
 const JUMP_VELOCITY = 8
 
@@ -22,6 +23,7 @@ func _physics_process(delta):
 func _input(event):
 	player_camera(event)
 	if Input.is_action_just_pressed("key_attack"):
+		
 		action_attack()
 	
 func player_movement(delta):
@@ -32,6 +34,8 @@ func player_movement(delta):
 	var input_dir = Vector3.ZERO
 	if Input.is_action_just_pressed("key_jump") and is_on_floor() and !animation_player.is_playing():
 		animation_player.play("playerAnimation/action_jump")
+		pisadas.play()
+		
 		velocity.y = JUMP_VELOCITY
 		input_dir.x = transform.basis.x.x * transform.basis.x.z
 		input_dir.z = -1
@@ -49,6 +53,8 @@ func player_movement(delta):
 	
 func action_attack():
 	animation_player.play("playerAnimation/action_attack")
+	axe_whip.play()
+	
 func player_camera(input):
 	if input is InputEventMouseMotion && Input.is_action_pressed("left_click"):
 		rotate_y(deg_to_rad(-input.relative.x * sens_x))

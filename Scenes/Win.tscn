@@ -12,7 +12,7 @@ script = ExtResource("1_18j4v")
 transform = Transform3D(1, 0, 0, 0, 0.990285, -0.139052, 0, 0.139052, 0.990285, 0, 2.01007, -18.2101)
 pixel_size = 0.05
 text = "Thanks
-Your brothers are now save...
+Your brothers are now safe...
 
 Press SPACE to continue
 

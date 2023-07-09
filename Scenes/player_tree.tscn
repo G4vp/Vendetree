@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ujchv17lhi5k"]
+[gd_scene load_steps=7 format=3 uid="uid://ujchv17lhi5k"]
 
 [ext_resource type="Script" path="res://Scripts/player_tree.gd" id="1_wocdy"]
 [ext_resource type="PackedScene" uid="uid://h5lv0patloqc" path="res://Scenes/mesh_tree_3d.tscn" id="2_dnaxe"]
 [ext_resource type="Script" path="res://Scripts/CameraControl.gd" id="2_xjqky"]
+[ext_resource type="AudioStream" uid="uid://bki5636e8ec2s" path="res://Assets/Audio/Weapon Axe Whip 2 - QuickSounds.com.mp3" id="4_jm4nl"]
+[ext_resource type="AudioStream" uid="uid://bwge4wuj87ogg" path="res://Assets/Audio/pisadas.wav" id="4_mh6mx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_intgj"]
 radius = 0.7
@@ -29,3 +31,11 @@ script = ExtResource("2_xjqky")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209101, 5.01675, 10.022)
 
 [node name="mesh_tree_3d" parent="." instance=ExtResource("2_dnaxe")]
+
+[node name="Pisadas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mh6mx")
+volume_db = -35.657
+
+[node name="AxeWhip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jm4nl")
+volume_db = -24.712
