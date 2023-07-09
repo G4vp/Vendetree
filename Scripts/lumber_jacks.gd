@@ -1,28 +1,26 @@
-extends CharacterBody3D
+extends Node3D
 
+@onready var pin_joint = $PinJoint3D2
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@onready var lower_body = $LowerBody
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+@onready var upper_body = $UpperBody
 
-
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	# var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	# var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	# if direction:
-	# 	velocity.x = direction.x * SPEED
-	# 	velocity.z = direction.z * SPEED
-	# else:
-	# 	velocity.x = move_toward(velocity.x, 0, SPEED)
-	# 	velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
+var is_dead = false
+func AreaEntered(area):
+	if not is_dead:
+		pin_joint.queue_free()
+		
+		var random_x = randi_range(3,7)
+		var random_z = randi_range(3,7)
+		var random_y = randi_range(1,3)
+		var random_rotation = randi_range(2,20)
+		
+		
+		upper_body.apply_impulse(Vector3(-random_x,random_y,-random_z))
+		lower_body.apply_impulse(Vector3(random_x,random_y,random_z))
+		upper_body.rotate_x(random_rotation)
+		lower_body.rotate_z(random_rotation)
+		
+		is_dead = true
+		

@@ -24,6 +24,7 @@ item/0/navigation_layers = 1
 [node name="Node3D" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0874414, 0.0701952, 0.0249043)
 mesh_library = SubResource("MeshLibrary_7xybs")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -38,4 +39,4 @@ transform = Transform3D(1, 0, 0, 0, -0.0868427, 0.996222, 0, -0.996222, -0.08684
 shadow_enabled = true
 
 [node name="LumberJacks" parent="." instance=ExtResource("2_utwcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.20123, -17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.20123, -8.49349)
