@@ -5,7 +5,7 @@ extends Node3D
 @onready var lumber_jacks_group = $LumberJacksGroup
 @onready var player = $Player/mesh_tree_3d
 
-var time_elapsed := 90
+var time_elapsed := 12000
 var minutes
 var seconds
 var time_string
@@ -36,7 +36,7 @@ func stop_watch(delta):
 	time_label.text = time_string
 
 func Win():
-	pass
+	get_tree().change_scene_to_file("res://Scenes/Win.tscn")
 	
 func GameOver():
-	get_tree().change_scene_to_file("res://Scenes/Start.tscn")
+	get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")

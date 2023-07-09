@@ -137,7 +137,7 @@ horizontal_alignment = 0
 transform = Transform3D(0.999983, -0.00566133, 0.00131441, 0.00581191, 0.974074, -0.226154, 0, 0.226158, 0.974091, 0, 56.2913, -212.026)
 pixel_size = 1.0
 text = "Remains
-08"
+12"
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0874414, 0.0701952, 0.0249043)
@@ -226,5 +226,19 @@ transform = Transform3D(-0.124519, 0, -0.992217, 0, 1, 0, 0.992217, 0, -0.124519
 [node name="LumberJacks7" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
 transform = Transform3D(-0.530334, 0, 0.847789, 0, 1, 0, -0.847789, 0, -0.530334, 0.00722218, 2.40166, -6.70536)
 
+[node name="LumberJacks12" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
+transform = Transform3D(0.101083, -0.00605331, -0.99486, -0.00308821, 0.999976, -0.00639821, 0.994874, 0.00371906, 0.101062, -26.1717, 2.01322, -0.284481)
+
+[node name="LumberJacks11" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
+transform = Transform3D(-0.467405, -0.0149964, -0.883916, -0.0174596, 0.999819, -0.00773034, 0.883871, 0.0118195, -0.467582, -12.0041, 2.39684, -17.0284)
+
+[node name="LumberJacks10" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
+transform = Transform3D(-0.947613, -0.0219826, 0.318663, -0.0210945, 0.999759, 0.00623813, -0.318723, -0.000810726, -0.947848, -14.2522, 2.33156, 19.3999)
+
+[node name="LumberJacks9" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
+transform = Transform3D(0.161578, -0.010647, 0.986802, -0.0078971, 0.999896, 0.0120814, -0.986829, -0.00974495, 0.161477, -4.15543, 2.29352, 32.4586)
+
 [node name="LumberJacks8" parent="LumberJacksGroup" instance=ExtResource("2_utwcx")]
 transform = Transform3D(0.401308, -0.00789709, 0.915909, -3.58959e-10, 0.999963, 0.00862182, -0.915943, -0.00346001, 0.401294, -8.92366, 2.46439, 9.13718)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

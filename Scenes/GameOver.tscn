@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf7wq85erhri"]
+
+[ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_xc7gw"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97006, 0)
+script = ExtResource("1_xc7gw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Vendetta" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.990285, -0.139052, 0, 0.139052, 0.990285, 0, 0.0289873, -18.2101)
+pixel_size = 0.05
+text = "All your brothers are dead...
+
+Press R to restart
+
+Press ESC to quit"
