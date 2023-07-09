@@ -3,7 +3,6 @@ extends Node3D
 @onready var time_label = $Labels/TimeLabel
 @onready var remain_label = $Labels/RemainLabel
 @onready var lumber_jacks_group = $LumberJacksGroup
-@onready var timer = $Labels/Timer
 @onready var player = $Player/mesh_tree_3d
 
 var time_elapsed := 12000
