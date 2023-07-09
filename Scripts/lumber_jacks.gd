@@ -26,6 +26,6 @@ func AreaEntered(_area):
 		is_dead = true
 
 func switch_mesh():
-	character_body.hide()
+	character_body.queue_free()
 	upper_body.show()
 	lower_body.show()

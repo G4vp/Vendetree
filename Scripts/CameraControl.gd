@@ -9,7 +9,6 @@ var sens_v = 0.7
 func _ready():
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
 	$h.rotation_degrees.y = camrot_h
 	$h/v.rotation_degrees.x = camrot_v
