@@ -28,7 +28,4 @@ script = ExtResource("2_xjqky")
 [node name="Camera3D" type="Camera3D" parent="CameraControl/h/v"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209101, 5.01675, 10.022)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraControl/h/v/Camera3D"]
-spring_length = 8.0
-
 [node name="mesh_tree_3d" parent="." instance=ExtResource("2_dnaxe")]

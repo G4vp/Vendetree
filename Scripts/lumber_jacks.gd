@@ -7,7 +7,8 @@ extends Node3D
 @onready var upper_body = $UpperBody
 
 var is_dead = false
-func AreaEntered(area):
+func AreaEntered(_area):
+	print(_area.name)
 	if not is_dead:
 		pin_joint.queue_free()
 		
@@ -18,9 +19,8 @@ func AreaEntered(area):
 		
 		switch_mesh()
 		
-		upper_body.apply_impulse(Vector3(-random_x,random_y,-random_z))
+		upper_body.apply_impulse(Vector3(-random_x+3,random_y,-random_z+3))
 		lower_body.apply_impulse(Vector3(random_x,random_y,random_z))
-		upper_body.rotate_x(random_rotation)
 		lower_body.rotate_z(random_rotation)
 		
 		is_dead = true
