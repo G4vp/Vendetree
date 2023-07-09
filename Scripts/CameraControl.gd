@@ -4,8 +4,8 @@ extends Node3D
 var camrot_h = 0
 var camrot_v = 0
 
-var sens_h = 0.08
-var sens_v = 0.08
+var sens_h = 0.7
+var sens_v = 0.7
 func _ready():
 	pass
 
