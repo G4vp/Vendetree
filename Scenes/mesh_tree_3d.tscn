@@ -290,7 +290,7 @@ mesh = SubResource("ArrayMesh_mxidq")
 skin = SubResource("Skin_sisle")
 
 [node name="axe_bone" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.49012e-08, 4.47035e-07, 3.38275e-07, 0.628681, -0.777664, -2.9263e-07, 0.777664, 0.628681, 1.75287e-15, 2.60093, -1.43226)
+transform = Transform3D(1, 1.49008e-08, 4.47034e-07, 3.38274e-07, 0.628681, -0.777663, -2.9263e-07, 0.777663, 0.628681, 3.58243e-13, 2.60092, -1.43226)
 bone_name = "AXE HUE"
 bone_idx = 7
 
