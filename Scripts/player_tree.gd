@@ -3,8 +3,8 @@ extends CharacterBody3D
 @onready var node_mesh = $mesh_tree_3d
 @onready var animation_player = $mesh_tree_3d/AnimationPlayer
 
-const SPEED = 125
-const JUMP_VELOCITY = 7
+const SPEED = 200
+const JUMP_VELOCITY = 8
 
 var sens_x = 0.08
 var sens_y = 0.08

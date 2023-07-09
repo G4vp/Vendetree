@@ -39,4 +39,13 @@ transform = Transform3D(1, 0, 0, 0, -0.0868427, 0.996222, 0, -0.996222, -0.08684
 shadow_enabled = true
 
 [node name="LumberJacks" parent="." instance=ExtResource("2_utwcx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.20123, -8.49349)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0225639, 6.20123, -8.4851)
+
+[node name="LumberJacks2" parent="." instance=ExtResource("2_utwcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81443, 4.38359, 1.50577)
+
+[node name="LumberJacks3" parent="." instance=ExtResource("2_utwcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2114, 4.09307, 25.0493)
+
+[node name="LumberJacks4" parent="." instance=ExtResource("2_utwcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6464, 3.14684, -3.26877)
