@@ -15,6 +15,6 @@ func _physics_process(_delta):
 func _input(event):
 	camrot_v = clamp(camrot_v,-55, 30)
 	
-	if  event is InputEventMouseMotion && !Input.is_action_pressed("left_click"):
+	if  event is InputEventMouseMotion:
 		camrot_h += -event.relative.x*sens_h
 		camrot_v += event.relative.y*sens_v

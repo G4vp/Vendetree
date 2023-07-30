@@ -19,9 +19,9 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	player_movement(delta)
+	player_camera(delta)
 
 func _input(event):
-	player_camera(event)
 	if Input.is_action_just_pressed("key_attack"):
 		
 		action_attack()
@@ -55,6 +55,8 @@ func action_attack():
 	animation_player.play("playerAnimation/action_attack")
 	axe_whip.play()
 	
-func player_camera(input):
-	if input is InputEventMouseMotion && Input.is_action_pressed("left_click"):
-		rotate_y(deg_to_rad(-input.relative.x * sens_x))
+func player_camera(delta):
+	if Input.is_action_pressed("key_right"):
+		rotate_y(deg_to_rad(-200*delta))
+	elif Input.is_action_pressed("key_left"):
+		rotate_y(deg_to_rad(200*delta))
