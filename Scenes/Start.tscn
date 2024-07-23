@@ -159,7 +159,7 @@ text = "Fight for vendetta..."
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Vendetta")
-autoplay = "AnimationStart"
 libraries = {
 "": SubResource("AnimationLibrary_te7wb")
 }
+autoplay = "AnimationStart"
